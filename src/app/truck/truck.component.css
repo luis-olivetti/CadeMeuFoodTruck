@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.title {
+  font-size: large;
+}
+
+#map {
+  display: flex;
+  justify-content: center;
+}

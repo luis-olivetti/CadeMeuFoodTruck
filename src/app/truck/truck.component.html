@@ -1,0 +1,50 @@
+<div class="container">
+  <form [formGroup]="truckForm" (ngSubmit)="onSubmit()" class="form-group">
+    <legend class="title">Conte-nos sobre seu Truck</legend>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput type="text" formControlName="name" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Endereço</mat-label>
+      <input matInput type="text" formControlName="address" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Telefone</mat-label>
+      <input matInput type="text" formControlName="phone" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>E-mail</mat-label>
+      <input matInput type="email" formControlName="email" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo</mat-label>
+      <mat-select required formControlName="type">
+        <mat-option>-- Nenhum --</mat-option>
+        <mat-option value="d">Dogão</mat-option>
+        <mat-option value="c">Churrasco</mat-option>
+        <mat-option value="o">Oriental</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div id="map" *ngIf="apiLoaded | async">
+      <google-map [options]="optionsMap" (mapClick)="addMarker($event)">
+        <map-marker
+          *ngIf="markerPosition"
+          [position]="markerPosition"
+          [options]="markerOptions"
+        ></map-marker>
+      </google-map>
+    </div>
+
+    <input type="hidden" id="txtLatitude" formControlName="lat" />
+    <input type="hidden" id="txtLongitude" formControlName="lng" />
+
+    <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+  </form>
+</div>
