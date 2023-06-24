@@ -6,6 +6,11 @@ import { TrucksOnMapComponent } from './trucks-on-map/trucks-on-map.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'trucks-on-map',
+    pathMatch: 'full',
+  },
+  {
     path: 'truck',
     component: TruckComponent,
   },

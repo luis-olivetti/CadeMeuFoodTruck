@@ -1,4 +1,5 @@
 export interface Truck {
+  id: number;
   lat: number;
   lng: number;
   name: string;

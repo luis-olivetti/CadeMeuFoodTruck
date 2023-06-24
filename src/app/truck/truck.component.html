@@ -26,11 +26,16 @@
       <mat-label>Tipo</mat-label>
       <mat-select required formControlName="type">
         <mat-option>-- Nenhum --</mat-option>
-        <mat-option value="d">Dogão</mat-option>
-        <mat-option value="c">Churrasco</mat-option>
-        <mat-option value="o">Oriental</mat-option>
+        <mat-option value="Caseira">Caseira</mat-option>
+        <mat-option value="Italiana">Italiana</mat-option>
+        <mat-option value="Cafeteria">Cafeteria</mat-option>
+        <mat-option value="Bar">Bar</mat-option>
+        <mat-option value="Oriental">Oriental</mat-option>
+        <mat-option value="Mineira">Mineira</mat-option>
       </mat-select>
     </mat-form-field>
+
+    <p>Selecione no mapa onde fica aproximadamente o seu Truck</p>
 
     <div id="map" *ngIf="apiLoaded | async">
       <google-map [options]="optionsMap" (mapClick)="addMarker($event)">

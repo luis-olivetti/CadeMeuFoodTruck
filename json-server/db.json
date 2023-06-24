@@ -1,6 +1,7 @@
 {
   "trucksOnMap": [
     {
+      "id": 1,
       "lat": -23.426404,
       "lng": -51.92508,
       "name": "Restaurante Aconchego",
@@ -9,6 +10,7 @@
       "type": "Caseira"
     },
     {
+      "id": 2,
       "lat": -23.42255,
       "lng": -51.933663,
       "name": "Cantinho Saboroso",
@@ -17,6 +19,7 @@
       "type": "Italiana"
     },
     {
+      "id": 3,
       "lat": -23.419208,
       "lng": -51.939927,
       "name": "Sabor Caseiro",
@@ -25,6 +28,7 @@
       "type": "Caseira"
     },
     {
+      "id": 4,
       "lat": -23.420296,
       "lng": -51.932505,
       "name": "Delícias da Vovó",
@@ -33,6 +37,7 @@
       "type": "Caseira"
     },
     {
+      "id": 5,
       "lat": -23.425687,
       "lng": -51.932741,
       "name": "Pizzaria da Esquina",
@@ -41,6 +46,7 @@
       "type": "Italiana"
     },
     {
+      "id": 6,
       "lat": -23.422916,
       "lng": -51.929555,
       "name": "Café do Bosque",
@@ -49,6 +55,7 @@
       "type": "Cafeteria"
     },
     {
+      "id": 7,
       "lat": -23.427848,
       "lng": -51.931824,
       "name": "Cantina Italiana",
@@ -57,6 +64,7 @@
       "type": "Italiana"
     },
     {
+      "id": 8,
       "lat": -23.418775,
       "lng": -51.929367,
       "name": "Bar do João",
@@ -65,6 +73,7 @@
       "type": "Bar"
     },
     {
+      "id": 9,
       "lat": -23.419649,
       "lng": -51.926213,
       "name": "Sushi House",
@@ -73,6 +82,7 @@
       "type": "Oriental"
     },
     {
+      "id": 10,
       "lat": -23.41721,
       "lng": -51.928377,
       "name": "Fogão Mineiro",
@@ -81,6 +91,7 @@
       "type": "Mineira"
     },
     {
+      "id": 11,
       "lat": -23.427208,
       "lng": -51.936112,
       "name": "Hamburgueria Gourmet",
@@ -89,6 +100,7 @@
       "type": "Hamburgueria"
     },
     {
+      "id": 12,
       "lat": -23.423997,
       "lng": -51.928692,
       "name": "Cantinho do Churrasco",
@@ -97,6 +109,7 @@
       "type": "Churrascaria"
     },
     {
+      "id": 13,
       "lat": -23.428165,
       "lng": -51.925543,
       "name": "Cantinho Vegetariano",
@@ -105,6 +118,7 @@
       "type": "Vegetariana"
     },
     {
+      "id": 14,
       "lat": -23.417512,
       "lng": -51.934266,
       "name": "Pão de Queijo Quentinho",
@@ -113,6 +127,7 @@
       "type": "Lanches"
     },
     {
+      "id": 15,
       "lat": -23.419919,
       "lng": -51.935534,
       "name": "Sabores da Terra",
@@ -121,6 +136,7 @@
       "type": "Caseira"
     },
     {
+      "id": 16,
       "lat": -23.418279,
       "lng": -51.932029,
       "name": "Casa dos Petiscos",
@@ -129,6 +145,7 @@
       "type": "Petiscos"
     },
     {
+      "id": 17,
       "lat": -23.424938,
       "lng": -51.938433,
       "name": "Pizzaria do Bairro",
@@ -137,6 +154,7 @@
       "type": "Italiana"
     },
     {
+      "id": 18,
       "lat": -23.423389,
       "lng": -51.927877,
       "name": "Burger Gourmet",
@@ -145,6 +163,7 @@
       "type": "Hamburgueria"
     },
     {
+      "id": 19,
       "lat": -23.427786,
       "lng": -51.929301,
       "name": "Tapiocaria",
@@ -153,12 +172,122 @@
       "type": "Nordestina"
     },
     {
+      "id": 20,
       "lat": -23.418417,
       "lng": -51.936295,
       "name": "Doces Delícias",
       "email": "docesdelicias@example.com",
       "phone": "(99) 1010-1111",
       "type": "Doceria"
+    },
+    {
+      "lat": -23.423301,
+      "lng": -51.927802,
+      "name": "Test",
+      "email": "burgergourmet@example.com",
+      "phone": "(99) 8888-9999",
+      "type": "Hamburgueria",
+      "id": 21
+    },
+    {
+      "name": "Teste",
+      "address": "teste",
+      "phone": "teste",
+      "email": "teste@teste.com",
+      "lat": "",
+      "lng": "",
+      "type": "d",
+      "id": 22
+    },
+    {
+      "name": "teste",
+      "address": "teste",
+      "phone": "atafdadsf",
+      "email": "teste@teste.com",
+      "lat": "",
+      "lng": "",
+      "type": "o",
+      "id": 23
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "email": "",
+      "lat": "",
+      "lng": "",
+      "type": "",
+      "id": 24
+    },
+    {
+      "name": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "lat": null,
+      "lng": null,
+      "type": null,
+      "id": 25
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "email": "",
+      "lat": "",
+      "lng": "",
+      "type": "",
+      "id": 26
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "email": "",
+      "lat": "",
+      "lng": "",
+      "type": "",
+      "id": 27
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "email": "",
+      "lat": "",
+      "lng": "",
+      "type": "",
+      "id": 28
+    },
+    {
+      "name": "sdxcv",
+      "address": "sfdgsdf",
+      "phone": "sdfgsdfg",
+      "email": "teste@teste.com",
+      "lat": -23.424199603508885,
+      "lng": -51.92603103843239,
+      "type": "o",
+      "id": 29
+    },
+    {
+      "name": "tes",
+      "address": "test",
+      "phone": "",
+      "email": "teste@teste.com",
+      "lat": -23.423175757153867,
+      "lng": -51.92465774741677,
+      "type": "Italiana",
+      "id": 30
+    },
+    {
+      "name": "sdg",
+      "address": "sdfg",
+      "phone": "",
+      "email": "teste@teste.com",
+      "lat": -23.4247902804928,
+      "lng": -51.92375652518776,
+      "type": "Caseira",
+      "id": 31
     }
   ]
 }

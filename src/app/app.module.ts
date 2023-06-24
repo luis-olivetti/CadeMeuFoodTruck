@@ -11,9 +11,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { TrucksOnMapComponent } from './trucks-on-map/trucks-on-map.component';
+import { SnackBarComponent } from './shared/snack-bar/snack-bar.component';
 
 @NgModule({
-  declarations: [AppComponent, TruckComponent, TrucksOnMapComponent],
+  declarations: [AppComponent, TruckComponent, TrucksOnMapComponent, SnackBarComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
