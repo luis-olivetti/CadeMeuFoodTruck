@@ -3,9 +3,9 @@ import { Component, ComponentRef, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable, of } from 'rxjs';
 import { catchError, mapTo } from 'rxjs/operators';
-import { TruckService } from './service/truck.service';
 import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 import { SnackBarComponent } from '../shared/snack-bar/snack-bar.component';
+import { TruckService } from '../services/truck.service';
 
 @Component({
   selector: 'app-truck',
@@ -19,34 +19,12 @@ export class TruckComponent implements OnInit {
   public markerOptions: google.maps.MarkerOptions = { draggable: true };
   public markerPosition: google.maps.LatLngLiteral | null = null;
 
-  public addMarker(event: google.maps.MapMouseEvent) {
-    if (!event.latLng) {
-      return;
-    }
-
-    this.markerPosition = event.latLng.toJSON();
-
-    this.truckForm.get('lat')?.setValue(this.markerPosition.lat);
-    this.truckForm.get('lng')?.setValue(this.markerPosition.lng);
-  }
-
   private durationInSeconds = 5;
 
   public optionsMap: google.maps.MapOptions = {
     center: { lat: -23.426404, lng: -51.925083 },
     zoom: 15,
   };
-
-  private openSnackBar(message: string) {
-    const snackBarRef: MatSnackBarRef<SnackBarComponent> =
-      this.snackBar.openFromComponent(SnackBarComponent, {
-        duration: this.durationInSeconds * 1000,
-      });
-
-    const snackBarComponent: SnackBarComponent = snackBarRef.instance;
-
-    snackBarComponent.message = message;
-  }
 
   constructor(
     private formBuilder: FormBuilder,
@@ -77,23 +55,36 @@ export class TruckComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  public onSubmit() {
-    console.log(this.truckForm.value);
+  public addMarker(event: google.maps.MapMouseEvent) {
+    if (!event.latLng) {
+      return;
+    }
 
+    this.markerPosition = event.latLng.toJSON();
+
+    this.truckForm.get('lat')?.setValue(this.markerPosition.lat);
+    this.truckForm.get('lng')?.setValue(this.markerPosition.lng);
+  }
+
+  private openSnackBar(message: string) {
+    const snackBarRef: MatSnackBarRef<SnackBarComponent> =
+      this.snackBar.openFromComponent(SnackBarComponent, {
+        duration: this.durationInSeconds * 1000,
+      });
+
+    const snackBarComponent: SnackBarComponent = snackBarRef.instance;
+
+    snackBarComponent.message = message;
+  }
+
+  public onSubmit() {
     if (this.truckForm.valid) {
       this.truckService.createTruck(this.truckForm.value).subscribe(
         () => {
-          console.log('Truck created successfully');
           this.openSnackBar('Truck cadastrado!');
           this.truckForm.reset();
-
-          Object.keys(this.truckForm.controls).forEach((key: string) => {
-            const control = this.truckForm.get(key);
-            control?.setValue(null);
-          });
         },
         (error) => {
-          console.error('Error creating truck:', error);
           this.openSnackBar('Ops, ocorreu uma falha ao cadastrar.');
         }
       );

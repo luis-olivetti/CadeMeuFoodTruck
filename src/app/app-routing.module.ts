@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TruckComponent } from './truck/truck.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TrucksOnMapComponent } from './trucks-on-map/trucks-on-map.component';
+import { TruckListComponent } from './truck-list/truck-list.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'trucks-on-map',
     component: TrucksOnMapComponent,
+  },
+  {
+    path: 'truck-list',
+    component: TruckListComponent,
   },
 ];
 

@@ -190,86 +190,6 @@
       "id": 21
     },
     {
-      "name": "Teste",
-      "address": "teste",
-      "phone": "teste",
-      "email": "teste@teste.com",
-      "lat": "",
-      "lng": "",
-      "type": "d",
-      "id": 22
-    },
-    {
-      "name": "teste",
-      "address": "teste",
-      "phone": "atafdadsf",
-      "email": "teste@teste.com",
-      "lat": "",
-      "lng": "",
-      "type": "o",
-      "id": 23
-    },
-    {
-      "name": "",
-      "address": "",
-      "phone": "",
-      "email": "",
-      "lat": "",
-      "lng": "",
-      "type": "",
-      "id": 24
-    },
-    {
-      "name": null,
-      "address": null,
-      "phone": null,
-      "email": null,
-      "lat": null,
-      "lng": null,
-      "type": null,
-      "id": 25
-    },
-    {
-      "name": "",
-      "address": "",
-      "phone": "",
-      "email": "",
-      "lat": "",
-      "lng": "",
-      "type": "",
-      "id": 26
-    },
-    {
-      "name": "",
-      "address": "",
-      "phone": "",
-      "email": "",
-      "lat": "",
-      "lng": "",
-      "type": "",
-      "id": 27
-    },
-    {
-      "name": "",
-      "address": "",
-      "phone": "",
-      "email": "",
-      "lat": "",
-      "lng": "",
-      "type": "",
-      "id": 28
-    },
-    {
-      "name": "sdxcv",
-      "address": "sfdgsdf",
-      "phone": "sdfgsdfg",
-      "email": "teste@teste.com",
-      "lat": -23.424199603508885,
-      "lng": -51.92603103843239,
-      "type": "o",
-      "id": 29
-    },
-    {
       "name": "tes",
       "address": "test",
       "phone": "",
@@ -278,16 +198,6 @@
       "lng": -51.92465774741677,
       "type": "Italiana",
       "id": 30
-    },
-    {
-      "name": "sdg",
-      "address": "sdfg",
-      "phone": "",
-      "email": "teste@teste.com",
-      "lat": -23.4247902804928,
-      "lng": -51.92375652518776,
-      "type": "Caseira",
-      "id": 31
     }
   ]
 }

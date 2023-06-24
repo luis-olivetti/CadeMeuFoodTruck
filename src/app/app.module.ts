@@ -12,9 +12,18 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { TrucksOnMapComponent } from './trucks-on-map/trucks-on-map.component';
 import { SnackBarComponent } from './shared/snack-bar/snack-bar.component';
+import { TruckListComponent } from './truck-list/truck-list.component';
+import { ConfirmDialogComponent } from './shared/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
-  declarations: [AppComponent, TruckComponent, TrucksOnMapComponent, SnackBarComponent],
+  declarations: [
+    AppComponent,
+    TruckComponent,
+    TrucksOnMapComponent,
+    SnackBarComponent,
+    TruckListComponent,
+    ConfirmDialogComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

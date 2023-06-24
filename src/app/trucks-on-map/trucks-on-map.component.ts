@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Observable, Subscription, of } from 'rxjs';
 import { catchError, mapTo } from 'rxjs/operators';
-import { TrucksOnMapService } from './service/trucks-on-map.service';
 import { MapInfoWindow, MapMarker } from '@angular/google-maps';
+import { TruckService } from '../services/truck.service';
 
 @Component({
   selector: 'app-trucks-on-map',
@@ -30,10 +30,6 @@ export class TrucksOnMapComponent implements OnInit, OnDestroy {
 
   public handleMarkerClick(markerPosition: any): void {
     this.selectedMarker = markerPosition;
-
-    console.log(this.selectedMarker);
-
-    //this.infoWindow.open(markerPosition);
   }
 
   public selectedMarker!: {
@@ -47,7 +43,7 @@ export class TrucksOnMapComponent implements OnInit, OnDestroy {
 
   constructor(
     private httpClient: HttpClient,
-    private trucksOnMapService: TrucksOnMapService
+    private trucksService: TruckService
   ) {
     this.apiLoaded = httpClient
       .jsonp(
@@ -67,8 +63,8 @@ export class TrucksOnMapComponent implements OnInit, OnDestroy {
     this.getTrucks();
   }
 
-  getTrucks(): void {
-    this.trucksSubscription = this.trucksOnMapService
+  private getTrucks(): void {
+    this.trucksSubscription = this.trucksService
       .getTrucks()
       .subscribe((trucks) => {
         this.markerPositions = trucks.map((truck) => ({
