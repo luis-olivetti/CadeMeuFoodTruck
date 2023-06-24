@@ -1,16 +1,18 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Observable, Subscription, of } from 'rxjs';
 import { catchError, mapTo } from 'rxjs/operators';
 import { TrucksOnMapService } from './service/trucks-on-map.service';
-import { Truck } from '../models/truck';
+import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 
 @Component({
   selector: 'app-trucks-on-map',
   templateUrl: './trucks-on-map.component.html',
   styleUrls: ['./trucks-on-map.component.css'],
 })
-export class TrucksOnMapComponent implements OnInit {
+export class TrucksOnMapComponent implements OnInit, OnDestroy {
+  @ViewChild(MapInfoWindow) infoWindow!: MapInfoWindow;
+
   public apiLoaded: Observable<boolean>;
 
   public optionsMap: google.maps.MapOptions = {
@@ -18,7 +20,30 @@ export class TrucksOnMapComponent implements OnInit {
     zoom: 15,
   };
 
-  public markerPositions: google.maps.LatLngLiteral[] = [];
+  public markerPositions: {
+    position: google.maps.LatLngLiteral;
+    name: string;
+    email: string;
+    phone: string;
+    type: string;
+  }[] = [];
+
+  public handleMarkerClick(markerPosition: any): void {
+    this.selectedMarker = markerPosition;
+
+    console.log(this.selectedMarker);
+
+    //this.infoWindow.open(markerPosition);
+  }
+
+  public selectedMarker!: {
+    name: string;
+    email: string;
+    phone: string;
+    type: string;
+  };
+
+  private trucksSubscription!: Subscription;
 
   constructor(
     private httpClient: HttpClient,
@@ -34,17 +59,28 @@ export class TrucksOnMapComponent implements OnInit {
         catchError(() => of(false))
       );
   }
+  ngOnDestroy(): void {
+    this.trucksSubscription.unsubscribe();
+  }
 
   ngOnInit(): void {
     this.getTrucks();
   }
 
   getTrucks(): void {
-    this.trucksOnMapService.getTrucks().subscribe((trucks) => {
-      this.markerPositions = trucks.map((truck) => ({
-        lat: truck.lat,
-        lng: truck.lng,
-      }));
-    });
+    this.trucksSubscription = this.trucksOnMapService
+      .getTrucks()
+      .subscribe((trucks) => {
+        this.markerPositions = trucks.map((truck) => ({
+          position: {
+            lat: truck.lat,
+            lng: truck.lng,
+          },
+          name: truck.name,
+          email: truck.email,
+          phone: truck.phone,
+          type: truck.type,
+        }));
+      });
   }
 }

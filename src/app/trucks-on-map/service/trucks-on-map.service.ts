@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Truck } from 'src/app/models/truck';
 
 @Injectable({
@@ -12,6 +13,13 @@ export class TrucksOnMapService {
   constructor(private http: HttpClient) {}
 
   getTrucks(): Observable<Truck[]> {
-    return this.http.get<Truck[]>(this.apiUrl);
+    return this.http
+      .get<Truck[]>(this.apiUrl)
+      .pipe(catchError(this.handleError));
+  }
+
+  private handleError(error: any): Observable<never> {
+    console.error('An error occurred:', error);
+    return throwError('Something went wrong. Please try again later.');
   }
 }

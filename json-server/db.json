@@ -1,24 +1,164 @@
 {
   "trucksOnMap": [
-    { "lat": -23.426404, "lng": -51.92508 },
-    { "lat": -23.42255, "lng": -51.933663 },
-    { "lat": -23.419208, "lng": -51.939927 },
-    { "lat": -23.420296, "lng": -51.932505 },
-    { "lat": -23.425687, "lng": -51.932741 },
-    { "lat": -23.422916, "lng": -51.929555 },
-    { "lat": -23.427848, "lng": -51.931824 },
-    { "lat": -23.418775, "lng": -51.929367 },
-    { "lat": -23.419649, "lng": -51.926213 },
-    { "lat": -23.41721, "lng": -51.928377 },
-    { "lat": -23.427208, "lng": -51.936112 },
-    { "lat": -23.423997, "lng": -51.928692 },
-    { "lat": -23.428165, "lng": -51.925543 },
-    { "lat": -23.417512, "lng": -51.934266 },
-    { "lat": -23.419919, "lng": -51.935534 },
-    { "lat": -23.418279, "lng": -51.932029 },
-    { "lat": -23.424938, "lng": -51.938433 },
-    { "lat": -23.423389, "lng": -51.927877 },
-    { "lat": -23.427786, "lng": -51.929301 },
-    { "lat": -23.418417, "lng": -51.936295 }
+    {
+      "lat": -23.426404,
+      "lng": -51.92508,
+      "name": "Restaurante Aconchego",
+      "email": "aconchego@example.com",
+      "phone": "(99) 1111-1111",
+      "type": "Caseira"
+    },
+    {
+      "lat": -23.42255,
+      "lng": -51.933663,
+      "name": "Cantinho Saboroso",
+      "email": "cantinhosaboroso@example.com",
+      "phone": "(99) 2222-2222",
+      "type": "Italiana"
+    },
+    {
+      "lat": -23.419208,
+      "lng": -51.939927,
+      "name": "Sabor Caseiro",
+      "email": "saborcaseiro@example.com",
+      "phone": "(99) 3333-3333",
+      "type": "Caseira"
+    },
+    {
+      "lat": -23.420296,
+      "lng": -51.932505,
+      "name": "Delícias da Vovó",
+      "email": "deliciasdavovo@example.com",
+      "phone": "(99) 4444-4444",
+      "type": "Caseira"
+    },
+    {
+      "lat": -23.425687,
+      "lng": -51.932741,
+      "name": "Pizzaria da Esquina",
+      "email": "pizzariadaesquina@example.com",
+      "phone": "(99) 5555-5555",
+      "type": "Italiana"
+    },
+    {
+      "lat": -23.422916,
+      "lng": -51.929555,
+      "name": "Café do Bosque",
+      "email": "cafedobosque@example.com",
+      "phone": "(99) 6666-6666",
+      "type": "Cafeteria"
+    },
+    {
+      "lat": -23.427848,
+      "lng": -51.931824,
+      "name": "Cantina Italiana",
+      "email": "cantinaitaliana@example.com",
+      "phone": "(99) 7777-7777",
+      "type": "Italiana"
+    },
+    {
+      "lat": -23.418775,
+      "lng": -51.929367,
+      "name": "Bar do João",
+      "email": "bardojoao@example.com",
+      "phone": "(99) 8888-8888",
+      "type": "Bar"
+    },
+    {
+      "lat": -23.419649,
+      "lng": -51.926213,
+      "name": "Sushi House",
+      "email": "sushihouse@example.com",
+      "phone": "(99) 9999-9999",
+      "type": "Oriental"
+    },
+    {
+      "lat": -23.41721,
+      "lng": -51.928377,
+      "name": "Fogão Mineiro",
+      "email": "fogaomineiro@example.com",
+      "phone": "(99) 1010-1010",
+      "type": "Mineira"
+    },
+    {
+      "lat": -23.427208,
+      "lng": -51.936112,
+      "name": "Hamburgueria Gourmet",
+      "email": "hamburgueriagourmet@example.com",
+      "phone": "(99) 1111-2222",
+      "type": "Hamburgueria"
+    },
+    {
+      "lat": -23.423997,
+      "lng": -51.928692,
+      "name": "Cantinho do Churrasco",
+      "email": "cantinhodochurrasco@example.com",
+      "phone": "(99) 2222-3333",
+      "type": "Churrascaria"
+    },
+    {
+      "lat": -23.428165,
+      "lng": -51.925543,
+      "name": "Cantinho Vegetariano",
+      "email": "cantinhovegetariano@example.com",
+      "phone": "(99) 3333-4444",
+      "type": "Vegetariana"
+    },
+    {
+      "lat": -23.417512,
+      "lng": -51.934266,
+      "name": "Pão de Queijo Quentinho",
+      "email": "paodequeijoquentinho@example.com",
+      "phone": "(99) 4444-5555",
+      "type": "Lanches"
+    },
+    {
+      "lat": -23.419919,
+      "lng": -51.935534,
+      "name": "Sabores da Terra",
+      "email": "saboresdaterra@example.com",
+      "phone": "(99) 5555-6666",
+      "type": "Caseira"
+    },
+    {
+      "lat": -23.418279,
+      "lng": -51.932029,
+      "name": "Casa dos Petiscos",
+      "email": "casadospetiscos@example.com",
+      "phone": "(99) 6666-7777",
+      "type": "Petiscos"
+    },
+    {
+      "lat": -23.424938,
+      "lng": -51.938433,
+      "name": "Pizzaria do Bairro",
+      "email": "pizzariadobairro@example.com",
+      "phone": "(99) 7777-8888",
+      "type": "Italiana"
+    },
+    {
+      "lat": -23.423389,
+      "lng": -51.927877,
+      "name": "Burger Gourmet",
+      "email": "burgergourmet@example.com",
+      "phone": "(99) 8888-9999",
+      "type": "Hamburgueria"
+    },
+    {
+      "lat": -23.427786,
+      "lng": -51.929301,
+      "name": "Tapiocaria",
+      "email": "tapiocaria@example.com",
+      "phone": "(99) 9999-1010",
+      "type": "Nordestina"
+    },
+    {
+      "lat": -23.418417,
+      "lng": -51.936295,
+      "name": "Doces Delícias",
+      "email": "docesdelicias@example.com",
+      "phone": "(99) 1010-1111",
+      "type": "Doceria"
+    }
   ]
 }

@@ -1,4 +1,8 @@
 #map {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.info-marker-content {
+  width: 25em;
 }
