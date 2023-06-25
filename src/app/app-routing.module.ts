@@ -16,6 +16,10 @@ const routes: Routes = [
     component: TruckComponent,
   },
   {
+    path: 'truck/:id',
+    component: TruckComponent,
+  },
+  {
     path: 'trucks-on-map',
     component: TrucksOnMapComponent,
   },

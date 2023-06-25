@@ -18,6 +18,11 @@ export class TruckService {
       .pipe(catchError(this.handleError));
   }
 
+  public getTruckById(truckId: number): Observable<Truck> {
+    const url = `${this.apiUrl}/${truckId}`;
+    return this.http.get<Truck>(url).pipe(catchError(this.handleError));
+  }
+
   public createTruck(truck: Truck): Observable<any> {
     return this.http
       .post(this.apiUrl, truck)
@@ -25,6 +30,8 @@ export class TruckService {
   }
 
   public updateTruck(truck: Truck): Observable<any> {
+    console.log(truck.id);
+
     const url = `${this.apiUrl}/${truck.id}`;
     return this.http.put(url, truck).pipe(catchError(this.handleError));
   }

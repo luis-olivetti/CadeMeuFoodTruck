@@ -14,6 +14,8 @@ import { TrucksOnMapComponent } from './trucks-on-map/trucks-on-map.component';
 import { SnackBarComponent } from './shared/snack-bar/snack-bar.component';
 import { TruckListComponent } from './truck-list/truck-list.component';
 import { ConfirmDialogComponent } from './shared/confirm-dialog/confirm-dialog.component';
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ConfirmDialogComponent } from './shared/confirm-dialog/confirm-dialog.c
     SnackBarComponent,
     TruckListComponent,
     ConfirmDialogComponent,
+    HeaderMenuComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

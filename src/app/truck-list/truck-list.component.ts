@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../shared/confirm-dialog/confirm-dialog.component';
 import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 import { SnackBarComponent } from '../shared/snack-bar/snack-bar.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-truck-list',
@@ -19,6 +20,7 @@ export class TruckListComponent implements OnInit, OnDestroy {
   public displayedColumns: string[] = [
     'id',
     'name',
+    'address',
     'email',
     'phone',
     'type',
@@ -28,7 +30,8 @@ export class TruckListComponent implements OnInit, OnDestroy {
   constructor(
     private trucksService: TruckService,
     private dialog: MatDialog,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router
   ) {}
 
   ngOnDestroy(): void {
@@ -48,7 +51,8 @@ export class TruckListComponent implements OnInit, OnDestroy {
   }
 
   public editTruck(truck: Truck): void {
-    // Implement the edit functionality
+    const truckId = truck.id;
+    this.router.navigate(['/truck', truckId]);
   }
 
   public deleteTruck(truck: Truck): void {

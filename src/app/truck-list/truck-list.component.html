@@ -7,7 +7,7 @@
 
   <mat-divider></mat-divider>
 
-  <table mat-table [dataSource]="trucks" class="mat-elevation-z8 truck-table">
+  <table mat-table [dataSource]="trucks" class="truck-table">
     <ng-container *ngFor="let column of displayedColumns">
       <ng-container matColumnDef="{{ column }}">
         <th mat-header-cell *matHeaderCellDef>{{ column | titlecase }}</th>

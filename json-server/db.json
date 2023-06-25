@@ -7,15 +7,17 @@
       "name": "Restaurante Aconchego",
       "email": "aconchego@example.com",
       "phone": "(99) 1111-1111",
-      "type": "Caseira"
+      "type": "Caseira",
+      "address": "Rua dos Restaurantes, 123"
     },
     {
       "id": 2,
+      "name": "Cantinho Saboroso Teste",
+      "address": "Avenida das Pizzas, 456",
+      "phone": "(99) 2222-2222",
+      "email": "cantinhosaboroso@example.com",
       "lat": -23.42255,
       "lng": -51.933663,
-      "name": "Cantinho Saboroso",
-      "email": "cantinhosaboroso@example.com",
-      "phone": "(99) 2222-2222",
       "type": "Italiana"
     },
     {
@@ -25,7 +27,8 @@
       "name": "Sabor Caseiro",
       "email": "saborcaseiro@example.com",
       "phone": "(99) 3333-3333",
-      "type": "Caseira"
+      "type": "Caseira",
+      "address": "Rua das Comidas, 789"
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "name": "Delícias da Vovó",
       "email": "deliciasdavovo@example.com",
       "phone": "(99) 4444-4444",
-      "type": "Caseira"
+      "type": "Caseira",
+      "address": "Travessa dos Sabores, 321"
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "name": "Pizzaria da Esquina",
       "email": "pizzariadaesquina@example.com",
       "phone": "(99) 5555-5555",
-      "type": "Italiana"
+      "type": "Italiana",
+      "address": "Rua das Pizzas, 987"
     },
     {
       "id": 6,
@@ -52,7 +57,8 @@
       "name": "Café do Bosque",
       "email": "cafedobosque@example.com",
       "phone": "(99) 6666-6666",
-      "type": "Cafeteria"
+      "type": "Cafeteria",
+      "address": "Rua das Árvores, 654"
     },
     {
       "id": 7,
@@ -61,7 +67,8 @@
       "name": "Cantina Italiana",
       "email": "cantinaitaliana@example.com",
       "phone": "(99) 7777-7777",
-      "type": "Italiana"
+      "type": "Italiana",
+      "address": "Avenida da Pasta, 987"
     },
     {
       "id": 8,
@@ -70,7 +77,8 @@
       "name": "Bar do João",
       "email": "bardojoao@example.com",
       "phone": "(99) 8888-8888",
-      "type": "Bar"
+      "type": "Bar",
+      "address": "Rua dos Bares, 456"
     },
     {
       "id": 9,
@@ -79,7 +87,8 @@
       "name": "Sushi House",
       "email": "sushihouse@example.com",
       "phone": "(99) 9999-9999",
-      "type": "Oriental"
+      "type": "Oriental",
+      "address": "Rua do Sushi, 123"
     },
     {
       "id": 10,
@@ -88,7 +97,8 @@
       "name": "Fogão Mineiro",
       "email": "fogaomineiro@example.com",
       "phone": "(99) 1010-1010",
-      "type": "Mineira"
+      "type": "Mineira",
+      "address": "Avenida das Comidas, 789"
     },
     {
       "id": 11,
@@ -97,7 +107,8 @@
       "name": "Hamburgueria Gourmet",
       "email": "hamburgueriagourmet@example.com",
       "phone": "(99) 1111-2222",
-      "type": "Hamburgueria"
+      "type": "Hamburgueria",
+      "address": "Rua dos Hamburgueres, 456"
     },
     {
       "id": 12,
@@ -106,7 +117,8 @@
       "name": "Cantinho do Churrasco",
       "email": "cantinhodochurrasco@example.com",
       "phone": "(99) 2222-3333",
-      "type": "Churrascaria"
+      "type": "Churrascaria",
+      "address": "Avenida das Carnes, 789"
     },
     {
       "id": 13,
@@ -115,7 +127,8 @@
       "name": "Cantinho Vegetariano",
       "email": "cantinhovegetariano@example.com",
       "phone": "(99) 3333-4444",
-      "type": "Vegetariana"
+      "type": "Vegetariana",
+      "address": "Rua das Verduras, 321"
     },
     {
       "id": 14,
@@ -124,7 +137,8 @@
       "name": "Pão de Queijo Quentinho",
       "email": "paodequeijoquentinho@example.com",
       "phone": "(99) 4444-5555",
-      "type": "Lanches"
+      "type": "Lanches",
+      "address": "Rua dos Lanches, 654"
     },
     {
       "id": 15,
@@ -133,7 +147,8 @@
       "name": "Sabores da Terra",
       "email": "saboresdaterra@example.com",
       "phone": "(99) 5555-6666",
-      "type": "Caseira"
+      "type": "Caseira",
+      "address": "Avenida dos Sabores, 987"
     },
     {
       "id": 16,
@@ -142,62 +157,68 @@
       "name": "Casa dos Petiscos",
       "email": "casadospetiscos@example.com",
       "phone": "(99) 6666-7777",
-      "type": "Petiscos"
+      "type": "Petiscos",
+      "address": "Rua dos Petiscos, 456"
     },
     {
       "id": 17,
       "lat": -23.424938,
       "lng": -51.938433,
-      "name": "Pizzaria do Bairro",
-      "email": "pizzariadobairro@example.com",
+      "name": "Pizzaria Bella Napoli",
+      "email": "pizzariabellanapoli@example.com",
       "phone": "(99) 7777-8888",
-      "type": "Italiana"
+      "type": "Italiana",
+      "address": "Avenida da Pizza, 123"
     },
     {
       "id": 18,
-      "lat": -23.423389,
-      "lng": -51.927877,
-      "name": "Burger Gourmet",
-      "email": "burgergourmet@example.com",
+      "lat": -23.420062,
+      "lng": -51.939053,
+      "name": "Café Aromático",
+      "email": "cafaromatico@example.com",
       "phone": "(99) 8888-9999",
-      "type": "Hamburgueria"
+      "type": "Cafeteria",
+      "address": "Rua do Café, 987"
     },
     {
       "id": 19,
-      "lat": -23.427786,
-      "lng": -51.929301,
-      "name": "Tapiocaria",
-      "email": "tapiocaria@example.com",
+      "lat": -23.425834,
+      "lng": -51.93892,
+      "name": "Restaurante Oriental",
+      "email": "restauranteoriental@example.com",
       "phone": "(99) 9999-1010",
-      "type": "Nordestina"
+      "type": "Oriental",
+      "address": "Avenida do Sushi, 654"
     },
     {
       "id": 20,
-      "lat": -23.418417,
-      "lng": -51.936295,
-      "name": "Doces Delícias",
-      "email": "docesdelicias@example.com",
+      "lat": -23.42753,
+      "lng": -51.930547,
+      "name": "Bar do Zé",
+      "email": "bardoze@example.com",
       "phone": "(99) 1010-1111",
-      "type": "Doceria"
+      "type": "Bar",
+      "address": "Rua do Bar, 321"
     },
     {
-      "lat": -23.423301,
-      "lng": -51.927802,
-      "name": "Test",
-      "email": "burgergourmet@example.com",
-      "phone": "(99) 8888-9999",
-      "type": "Hamburgueria",
-      "id": 21
+      "id": 21,
+      "name": "Cantinho Saboroso",
+      "address": "Avenida das Pizzas, 456",
+      "phone": "(99) 2222-2222",
+      "email": "cantinhosaboroso@example.com",
+      "lat": -23.42255,
+      "lng": -51.933663,
+      "type": "Italiana"
     },
     {
-      "name": "tes",
-      "address": "test",
+      "id": 22,
+      "name": "sadfasdf",
+      "address": "asdfsdaf",
       "phone": "",
       "email": "teste@teste.com",
-      "lat": -23.423175757153867,
-      "lng": -51.92465774741677,
-      "type": "Italiana",
-      "id": 30
+      "lat": -23.42767281349715,
+      "lng": -51.92231715203334,
+      "type": "Caseira"
     }
   ]
 }
