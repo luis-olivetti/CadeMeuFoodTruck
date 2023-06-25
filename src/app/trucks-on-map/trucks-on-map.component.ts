@@ -4,6 +4,7 @@ import { Observable, Subscription, of } from 'rxjs';
 import { catchError, mapTo } from 'rxjs/operators';
 import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 import { TruckService } from '../services/truck.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-trucks-on-map',
@@ -15,6 +16,7 @@ export class TrucksOnMapComponent implements OnInit, OnDestroy {
 
   public apiLoaded: Observable<boolean>;
 
+  // Maringa
   public optionsMap: google.maps.MapOptions = {
     center: { lat: -23.426404, lng: -51.925083 },
     zoom: 15,
@@ -47,9 +49,9 @@ export class TrucksOnMapComponent implements OnInit, OnDestroy {
     private httpClient: HttpClient,
     private trucksService: TruckService
   ) {
-    this.apiLoaded = httpClient
+    this.apiLoaded = this.httpClient
       .jsonp(
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyDzKJmQkpzAYMLTVEiJzXjmxyKjE5sZWhw',
+        `https://maps.googleapis.com/maps/api/js?key=${environment.googleMapsKey}`,
         'callback'
       )
       .pipe(

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ComponentRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable, of } from 'rxjs';
 import { catchError, mapTo } from 'rxjs/operators';
@@ -7,6 +7,7 @@ import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 import { SnackBarComponent } from '../shared/snack-bar/snack-bar.component';
 import { TruckService } from '../services/truck.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-truck',
@@ -50,9 +51,9 @@ export class TruckComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router
   ) {
-    this.apiLoaded = httpClient
+    this.apiLoaded = this.httpClient
       .jsonp(
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyDzKJmQkpzAYMLTVEiJzXjmxyKjE5sZWhw',
+        `https://maps.googleapis.com/maps/api/js?key=${environment.googleMapsKey}`,
         'callback'
       )
       .pipe(

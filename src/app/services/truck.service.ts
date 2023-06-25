@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Truck } from '../models/truck';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -47,7 +48,7 @@ export class TruckService {
   }
 
   public getAddressFromLatLng(lat: number, lng: number): Observable<string> {
-    const apiKey = 'AIzaSyDzKJmQkpzAYMLTVEiJzXjmxyKjE5sZWhw';
+    const apiKey = environment.googleMapsKey;
     const geocodingUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`;
 
     return this.http.get<any>(geocodingUrl).pipe(

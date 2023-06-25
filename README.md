@@ -2,34 +2,40 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
 ## Backend
 
-This project uses Json Server.
+This project uses [Json Server](https://github.com/typicode/json-server).
+
+## How to run
+
+Enter a valid Google key for Google Maps to work:
+
+**environments.ts** file: `googleMapsKey='YOUR_KEY'`
+
+Run this command to install this project's dependencies:
 
 ```bash
-json-server$ json-server --watch db.json
+CadeMeuFoodTruck$ npm install
 ```
+
+Run the following command to start json-server and angular project:
+
+```bash
+CadeMeuFoodTruck$ npm start
+```
+
+## How to works
+
+When starting the project, the map will be focused on a region that contains some fictional trucks, where you can select them and view information such as `name`, `address`, `phone`, `email`, and `type`.
+
+![trucks-on-map](./src/assets/images/trucks-on-map.png)
+
+In the top-left corner of the side menu, there is an option called `Trucks` that navigates the website to a page with all registered trucks, where you can **add**, **edit**, and **delete** records.
+
+![truck-list](./src/assets/images/truck-list.png)
+
+Clicking on `Adicionar` or editing (using the pencil icon) will navigate the website to a page where the operation can be performed. To make it easier, when clicking on a location on the map, the website will automatically populate the `address` field with the address retrieved from **Google Maps**.
+
+![truck](./src/assets/images/truck.png)
+
+This is it!
