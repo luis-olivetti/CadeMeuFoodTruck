@@ -1,5 +1,5 @@
 <div id="map" *ngIf="apiLoaded | async">
-  <google-map [options]="optionsMap">
+  <google-map height="500px" width="700px" [options]="optionsMap">
     <map-marker
       #marker="mapMarker"
       *ngFor="let markerPosition of markerPositions"
@@ -10,12 +10,13 @@
   <div class="info-marker-content">
     <mat-card *ngIf="selectedMarker">
       <mat-card-header>
-        <mat-card-title>{{ selectedMarker?.name }}</mat-card-title>
-        <mat-card-subtitle>Tipo: {{ selectedMarker?.type }}</mat-card-subtitle>
+        <mat-card-title>{{ selectedMarker.name }}</mat-card-title>
+        <mat-card-subtitle>Tipo: {{ selectedMarker.type }}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <p>Email: {{ selectedMarker?.email }}</p>
-        <p>Telefone: {{ selectedMarker?.phone }}</p>
+        <p>Endereço: {{ selectedMarker.address }}</p>
+        <p>Email: {{ selectedMarker.email }}</p>
+        <p>Telefone: {{ selectedMarker.phone }}</p>
       </mat-card-content>
       <mat-card-actions>
         <button mat-button>Gostei</button>

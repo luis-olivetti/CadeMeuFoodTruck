@@ -23,6 +23,7 @@ export class TrucksOnMapComponent implements OnInit, OnDestroy {
   public markerPositions: {
     position: google.maps.LatLngLiteral;
     name: string;
+    address: string;
     email: string;
     phone: string;
     type: string;
@@ -34,6 +35,7 @@ export class TrucksOnMapComponent implements OnInit, OnDestroy {
 
   public selectedMarker!: {
     name: string;
+    address: string;
     email: string;
     phone: string;
     type: string;
@@ -73,6 +75,7 @@ export class TrucksOnMapComponent implements OnInit, OnDestroy {
             lng: truck.lng,
           },
           name: truck.name,
+          address: truck.address,
           email: truck.email,
           phone: truck.phone,
           type: truck.type,

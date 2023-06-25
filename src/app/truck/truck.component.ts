@@ -91,6 +91,17 @@ export class TruckComponent implements OnInit {
 
     this.truckForm.get('lat')?.setValue(this.markerPosition.lat);
     this.truckForm.get('lng')?.setValue(this.markerPosition.lng);
+
+    this.truckService
+      .getAddressFromLatLng(this.markerPosition.lat, this.markerPosition.lng)
+      .subscribe(
+        (address) => {
+          this.truckForm.get('address')?.setValue(address);
+        },
+        (error) => {
+          this.openSnackBar('Ops, ocorreu uma falha ao definir o endereço.');
+        }
+      );
   }
 
   private openSnackBar(message: string) {
@@ -105,7 +116,6 @@ export class TruckComponent implements OnInit {
   }
 
   public onSubmit() {
-    console.log('asdfads');
     if (this.truckForm.valid) {
       if (this.operation === 'EDIT') {
         this.truckService.updateTruck(this.truckForm.value).subscribe(

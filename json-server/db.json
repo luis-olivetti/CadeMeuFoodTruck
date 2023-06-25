@@ -211,14 +211,24 @@
       "type": "Italiana"
     },
     {
-      "id": 22,
-      "name": "sadfasdf",
-      "address": "asdfsdaf",
+      "id": 23,
+      "name": "Eden Beer",
+      "address": "Av. Laguna, 1520 - Zona 08, Maringá - PR, 87050-260, Brasil",
+      "phone": "(44) 99999-1569",
+      "email": "eden@beer.com",
+      "lat": -23.432221556475366,
+      "lng": -51.92111849784851,
+      "type": "Bar"
+    },
+    {
+      "id": 24,
+      "name": "Hot-Dog de Sarandi",
+      "address": "R. Pedro Galindo García, 220 - Centro, Sarandi - PR, 87111-210, Brasil",
       "phone": "",
-      "email": "teste@teste.com",
-      "lat": -23.42767281349715,
-      "lng": -51.92231715203334,
-      "type": "Caseira"
+      "email": "hotdog@gmail.com",
+      "lat": -23.443816073396203,
+      "lng": -51.87631561425381,
+      "type": "Lanches"
     }
   ]
 }
